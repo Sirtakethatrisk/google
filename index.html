@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <title>Search</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Programmable Search -->
+  <script async src="https://cse.google.com/cse.js?cx=PASTE_YOUR_CX_CODE_HERE"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,11 +19,14 @@
       margin: 0;
       background: white;
     }
+
     .logo {
       font-size: 90px;
       font-weight: bold;
       letter-spacing: -8px;
+      margin-bottom: 20px;
     }
+
     .logo span:nth-child(1) { color: #4285F4; }
     .logo span:nth-child(2) { color: #EA4335; }
     .logo span:nth-child(3) { color: #FBBC05; }
@@ -27,49 +34,21 @@
     .logo span:nth-child(5) { color: #34A853; }
     .logo span:nth-child(6) { color: #EA4335; }
 
-    input {
-      width: 500px;
-      padding: 14px;
-      font-size: 16px;
-      border-radius: 25px;
-      border: 1px solid #dcdcdc;
-      outline: none;
-    }
-
-    input:focus {
-      box-shadow: 0 1px 6px rgba(32,33,36,.28);
-    }
-
-    .buttons {
-      margin-top: 20px;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin: 5px;
-      border: none;
-      background: #f8f9fa;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    button:hover {
-      border: 1px solid #dadce0;
+    .gcse-search {
+      width: 90%;
+      max-width: 600px;
     }
   </style>
 </head>
+
 <body>
 
   <div class="logo">
     <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
   </div>
 
-  <form action="https://duckduckgo.com/" method="GET">
-    <input type="text" name="q" placeholder="Search the web" autofocus />
-    <div class="buttons">
-      <button type="submit">Search</button>
-    </div>
-  </form>
+  <!-- Google Search Box -->
+  <div class="gcse-search"></div>
 
 </body>
 </html>
